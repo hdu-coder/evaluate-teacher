@@ -84,6 +84,7 @@
 		function check(string) {
 			if (string.length !== 10) return false;
 			if (!/^[A-D]{10}$/.test(string)) return false;
+			if (/^A{10}$/.test(string)) return false;
 			return true;
 		}
 
