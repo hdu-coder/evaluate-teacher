@@ -3,7 +3,7 @@
 	var slice = Array.prototype.slice;
 	var currentSubject = -1;
 	var msgbox = document.createElement('div');
-	msgbox.style.cssText = "position:fixed; top: 0; left: 0;width: 100%;padding: 10px;margin: 0;background: grey;text-align:center;border: 1px solid #ccc;box-shadow: 0 0 10px black";
+	msgbox.style.cssText = "position:fixed; top: 0; left: 0;width: 100%;padding: 10px;margin: 0;background: grey;text-align:center;border: 1px solid #ccc;box-shadow: 0 0 10px black;z-index: 10000";
 	document.body.appendChild(msgbox);
 	
 	var iframe = document.getElementsByTagName('iframe')[0];
