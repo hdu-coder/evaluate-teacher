@@ -1,4 +1,5 @@
 (function() {
+	// https://github.com/hdu-coder/evaluate-teacher
 	'use strict';
 
 	// 请不要问我为什么不用 jQuery 去获取代码，因为，因为，TMD正方的$选择器是自己手写的
@@ -19,7 +20,7 @@
 
 	// 提示框，学过VB的一定很熟悉吧
 	var msgbox = document.createElement('div');
-	msgbox.style.cssText = "position:fixed; top: 0; left: 0;width: 100%;padding: 10px;margin: 0;background: grey;text-align:center;border: 1px solid #ccc;box-shadow: 0 0 10px black;z-index: 10000";
+	msgbox.style.cssText = "position: fixed;top: 0px;left: 0px;width: 100%;padding: 10px;margin: 0px;text-align: center;border: 1px solid rgb(204, 204, 204);box-shadow: black 0px 0px 10px;z-index: 10000;background: #3e3e3e;background: rgba(00,153,00,0.8);color: white;";
 	document.body.appendChild(msgbox);
 
 	var iframe = document.getElementsByTagName('iframe')[0];
@@ -27,7 +28,7 @@
 	iframe.addEventListener('load', function listener() {
 		setTimeout(function() {
 			if (!score()) {
-				msg('保存完成，提交打分，2秒后自动消失');
+				msg('保存完成，提交打分，2秒后自动消失，Thanks~');
 				iframe.removeEventListener('load', listener);
 				submit();
 				setTimeout(function() {
@@ -99,7 +100,7 @@
 
 	// 消息现实函数
 	function msg(string) {
-		msgbox.innerText = string;
+		msgbox.innerText = string + '  By XGHeaven';
 	}
 
 	// 获取打分等级(level)分布
