@@ -75,13 +75,14 @@
 			if (levels === null) return false;
 		}while(!check(levels))
 
-		config.levels = levels;
+		config.levels = levels || config.levels;
 
 		/**
 		 * 检测这个是否合法
 		 * @return {Boolean}
 		 */
 		function check(string) {
+		  if (string === '') return true;
 			if (string.length !== 10) return false;
 			if (!/^[A-D]{10}$/.test(string)) return false;
 			if (/^A{10}$/.test(string)) return false;
